@@ -7,7 +7,6 @@
     "pretest": "",
     "test": "jest",
     "testc": "jest --coverage",
-    "prebuild": "npm install -g typescript",
     "build": "tsc",
     "prestart": "npm run build",
     "start": "node ./dist/index.js",

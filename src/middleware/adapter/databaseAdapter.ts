@@ -7,7 +7,7 @@ const supabase = createClient("https://dgjkrgzwiwdioslnawzd.supabase.co", "eyJhb
 
 // Make a request
 
-export const allCardsForTopic = async (topicId: number) => {
+export const allCardsForTopicAdapter = async (topicId: number) => {
     console.log(`Get Cards for topicID: ${topicId}`);
     // Make a request
     const {data: dataObj, error: errObj} = await supabase
@@ -16,6 +16,10 @@ export const allCardsForTopic = async (topicId: number) => {
         .eq('id', topicId)
     if (errObj) console.error(`Error: ${inspect(errObj)}`)
     else return dataObj
+}
+
+export const getCardAdapter = async (cardId: number) => {
+
 }
 
 export const createCardAdapter = async (topicId: number, card: CardObject) => {

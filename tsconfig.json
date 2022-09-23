@@ -8,8 +8,8 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "sourceMap": true,
-    "outDir": "dist",
-    "sourceRoot": "src",
+    "outDir": "./dist",
+    "sourceRoot": "./src",
     "baseUrl": ".",
     "paths": {
       "*": [

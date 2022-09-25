@@ -1,5 +1,5 @@
 import {Express, Request, Response} from "express";
-import {createCard, getAllCardsForTopic} from "./middleware/controller/cardController";
+import {createCard, getAllCardsForTopic, getCard, updateCard} from "./middleware/controller/cardController";
 
 export const routes = (app: Express) => {
     app
@@ -16,13 +16,9 @@ export const routes = (app: Express) => {
     app
 
         //get card
-        .get("/cards/:cardId", (req: Request, res: Response) => {
-
-        })
+        .get("/cards/:cardId", getCard)
         //create card for topic
         .post("/topic/:topicId/cards", createCard)
         //edit or update card
-        .put("/project/:projectId/card/:cardId", (req: Request, res: Response) => {
-
-        })
+        .put("/topic/:topicId/card/:cardId", updateCard)
 };
